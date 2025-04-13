@@ -1,0 +1,252 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+    background-color: #f9f9f9;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #6e7dff, #8c6cf2);
+}
+
+.game-container {
+    max-width: 600px;
+    width: 100%;
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+#flag-image {
+    width: 200px;
+    max-width: 300px;
+    height: 120px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    transition: transform 0.3s ease;
+    animation: fadeIn 1s ease-in-out;
+}
+@keyframes fadeIn {
+    0% {
+      opacity: 0;
+      transform: scale(0.8);
+    }
+    100% {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+
+#flag-image:hover {
+    transform: scale(1.1);
+}
+
+#options {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.option-btn {
+    padding: 15px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 10px;
+    border: none;
+    background-color: #4CAF50;
+    color: white;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.option-btn:hover {
+    background-color: #45a049;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    transform: translateY(-4px);
+}
+
+.option-btn:active {
+    background-color: #388e3c;
+    transform: translateY(2px);
+}
+
+#score {
+    font-size: 22px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 30px;
+}
+
+.controls {
+    margin: 20px 0;
+}
+
+.controls button {
+    padding: 12px 20px;
+    margin: 0 10px;
+    font-size: 18px;
+    cursor: pointer;
+    background-color: #2196F3;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.controls button:hover {
+    background-color: #0b7dda;
+    transform: translateY(-4px);
+}
+
+.controls button:active {
+    background-color: #0a6cb3;
+    transform: translateY(2px);
+}
+
+h1 {
+    font-size: 36px;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+button {
+    padding: 12px 20px;
+    border-radius: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #ff5722;
+    color: white;
+    border: none;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background-color: #e64a19;
+    transform: translateY(-4px);
+}
+
+button:active {
+    background-color: #d84315;
+    transform: translateY(2px);
+}
+.difficulty {
+    margin-bottom: 20px;
+  }
+  
+  .difficulty h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  .difficulty label {
+    margin-right: 20px;
+    font-size: 18px;
+  }
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .game-container {
+        padding: 20px;
+    }
+
+    #flag-image {
+        max-width: 250px;
+        width: 70%;
+    }
+
+    #options {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .option-btn {
+        font-size: 16px;
+        padding: 12px;
+    }
+
+    #score {
+        font-size: 18px;
+    }
+
+    .controls button {
+        padding: 10px 15px;
+        font-size: 16px;
+    }
+
+    h1 {
+        font-size: 28px;
+    }
+    .difficulty h2 {
+        font-size: 20px; /* Telefon ekranları üçün daha kiçik başlıq */
+        margin-bottom: 5px;
+      }
+    
+      .difficulty label {
+        font-size: 16px; /* Etiketlər üçün kiçik font */
+        margin-right: 10px; /* Etiketlər arasında kiçik boşluq */
+      }
+    
+      .difficulty {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    
+      .difficulty label {
+        margin-right: 0;
+        margin-bottom: 10px; /* Etiketlər arasında daha çox boşluq */
+      }
+    
+      .difficulty input {
+        margin-bottom: 10px; /* Radio buttonlar arasında boşluq */
+      }
+}
+
+@media (max-width: 480px) {
+    .game-container {
+        padding: 15px;
+    }
+
+    #flag-image {
+        max-width: 200px;
+        width: 80%;
+    }
+
+    #options {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+
+    .option-btn {
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    #score {
+        font-size: 16px;
+    }
+
+    .controls button {
+        padding: 8px 12px;
+        font-size: 14px;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+    .difficulty h2 {
+        font-size: 18px; /* Telefonun daha kiçik ekranlarında başlıq daha kiçik olsun */
+      }
+    
+      .difficulty label {
+        font-size: 14px; /* Daha kiçik etiket fontu */
+      }
+}
